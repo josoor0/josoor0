@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البطاقات</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">اختر نوع البطاقات</h1>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <button class="card-btn full-width" onclick="showGallery('letters')">
+                    <span class="card-icon">🔤</span>
+                    <span class="card-label">الحروف</span>
+                </button>
+            </div>
+            
+            <div class="card">
+                <button class="card-btn full-width" onclick="showGallery('numbers')">
+                    <span class="card-icon">🔢</span>
+                    <span class="card-label">الأرقام</span>
+                </button>
+            </div>
+            
+            <div class="card">
+                <button class="card-btn full-width" onclick="showGallery('words')">
+                    <span class="card-icon">📖</span>
+                    <span class="card-label">الكلمات</span>
+                </button>
+            </div>
+        </div>
+        
+        <div id="gallery-container" class="gallery-container">
+    <div class="gallery-header">
+        <h2 id="gallery-title" class="gallery-title"></h2>
+        <button class="close-btn" onclick="closeGallery()" aria-label="إغلاق المعرض">
+            <span class="close-icon">✕</span>
+        </button>
+    </div>
+    
+    <div class="gallery-content fade-in">
+        <button class="arrow-btn left-arrow" onclick="prevImage()" aria-label="الصورة السابقة">
+            <span class="arrow-icon">→</span>
+        </button>
+        
+        <div class="image-container">
+            <img id="gallery-image" src="" alt="صورة البطاقة" class="gallery-image">
+            <div id="image-caption" class="image-caption"></div>
+        </div>
+        
+        <button class="arrow-btn right-arrow" onclick="nextImage()" aria-label="الصورة التالية">
+            <span class="arrow-icon">←</span>
+        </button>
+    </div>
+    
+    <div class="gallery-footer">
+        <div class="gallery-counter" id="gallery-counter"></div>
+    </div>
+</div>
+
+        <div class="back-btn-container">
+            <button class="card-btn secondary" onclick="window.location.href='home.html'">
+                <span class="btn-icon">⌂</span>
+                <span class="btn-text">العودة إلى الصفحة الرئيسية</span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
